@@ -20,30 +20,23 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
+
 }
 
-.section1 .svg-container {
-    z-index: 1;
+img .road{
+    bottom: 500px;
 }
 
-.section2 .svg-container {
-    z-index: 2;
-}
+.background{
+    z-index: 10;
 
-.section3 .svg-container {
-    z-index: 3;
 }
-
-.section4 .svg-container {
-    z-index: 4;
-}
-
-.section5 .svg-container {
+.palm{
+    position: relative;
     z-index: 5;
 }
 
-.section6 .svg-container {
-    z-index: 6;
-}
+
+
 
 
