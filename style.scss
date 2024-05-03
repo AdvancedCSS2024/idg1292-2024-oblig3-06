@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    height: 100vh; /* Sørger for at elementet fyller hele viewporten */
+    background-image: radial-gradient(circle, #A9DCFF, #EDF7FF);
+
+}
+
 h1 {
     color: deeppink;
     text-align: center;
