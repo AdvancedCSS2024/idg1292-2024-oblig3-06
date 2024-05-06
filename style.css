@@ -69,9 +69,9 @@ h1 {
 }
 
 .foreground {
-  position: absolute;
+  position: relative;
   z-index: 11;
-  top: -15.5vw;
+  top: -35vh;
   max-width: 100%;
 }
 
