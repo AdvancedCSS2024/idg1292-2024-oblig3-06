@@ -1,9 +1,11 @@
-@charset "UTF-8";
 body {
-  margin: 0;
-  height: 100vh; /* Sørger for at elementet fyller hele viewporten */
   background-image: radial-gradient(circle, #A9DCFF, #EDF7FF);
+  z-index: 0;
+  width: 100%;
   overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -11,92 +13,91 @@ h1 {
   text-align: center;
 }
 
+.container {
+  overflow-y: hidden; /* Disable vertical scrolling */
+}
+
+.frame {
+  height: 100vh; /* Each frame takes up the full height of the viewport */
+}
+
 .svg-container {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
-.road {
-  
+.svg {
   position: absolute;
 }
-
-.background {
-  position: absolute;
+.svg.background {
   z-index: 1;
-  top: -55vh;
+  top: -38vw;
 }
-
-.clouds{
-  z-index: 2;
-  top: -30vh;
-  position: absolute;
-  max-width: 80vw;
-  left: 8vw;
-}
-
-.palm {
-  position: absolute;
-  z-index: 10;
-  top: -11vh;
-  left: 17vw;
-  max-width: 65vw;
-}
-
-.road {
-  position: absolute;
+.svg.road {
   z-index: 9;
+  top: -7vw;
 }
-
-.bushes1 {
+.svg.bushes {
   z-index: 11;
-  position: absolute;
-  top: 25vh;
-  left: 15vw;
+  top: 10vw;
+  left: 17vw;
   max-width: 70vw;
 }
-
-.car{
-  position: absolute;
-  top: 15vh;
-  left: 15vw;
+.svg.palm {
+  z-index: 10;
+  top: -13vw;
+  left: 22vw;
+  max-width: 70vw;
+}
+.svg.clouds {
+  z-index: 0;
+  top: -15vw;
+  max-width: 75vw;
+  left: 8vw;
+  animation: cloudFloat 20s infinite linear;
+}
+.svg.car {
   z-index: 12;
-  max-width: 80vw;
-  animation: shake 2s infinite;
+  top: 4vw;
+  left: 17vw;
+  max-width: 78vw;
+  animation: carShake 2s infinite;
 }
-
-.foreground {
-  position: relative;
+.svg.foreground {
   z-index: 11;
-  top: -35vh;
-  max-width: 100%;
+  top: -15vw;
 }
-
-
 
 /** KEYFRAMES **/
-
-@keyframes shake {
-  0% { transform: translateY(0); }
-  10%, 90% { transform: translateY(-2px); }
-  20%, 80% { transform: translateY(2px); }
-  30%, 70% { transform: translateY(-1px); }
-  40%, 60% { transform: translateY(1px); }
-  100% { transform: translateY(0); }
+@keyframes carShake {
+  0% {
+    transform: translateY(0);
+  }
+  10%, 90% {
+    transform: translateY(-2px);
+  }
+  20%, 80% {
+    transform: translateY(2px);
+  }
+  30%, 70% {
+    transform: translateY(-1px);
+  }
+  40%, 60% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes cloudFloat {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /*# sourceMappingURL=style.css.map */
