@@ -9,17 +9,13 @@ h1 {
     text-align: center;
 }
 
-section {
-    position: relative;
-    height: 500px; 
-}
 
 .svg-container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 img .road{
@@ -27,12 +23,42 @@ img .road{
 }
 
 .background{
-    z-index: 10;
+    position: absolute;
+    z-index: 1;
+    top: -34vh;
 
 }
+
+
+
 .palm{
-    position: relative;
-    z-index: 5;
+    position: absolute;
+    z-index: 10;
+    top:-14vh;
+    left: 14vw;
+    max-width: 80vw;
+    
+}
+.road{
+    position: absolute;
+    z-index: 9;
+}
+.bushes1{
+    z-index: 11;
+    position: absolute;
+    top:14vh;
+    max-width: 100vw;
+}
+
+.car{
+    z-index: 12;
+    position: absolute;
+    max-width: 100%;
+}
+.foreground{
+    position: absolute;
+    
+    z-index:14;
 }
 
 

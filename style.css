@@ -3,6 +3,7 @@ body {
   margin: 0;
   height: 100vh; /* Sørger for at elementet fyller hele viewporten */
   background-image: radial-gradient(circle, #A9DCFF, #EDF7FF);
+  overflow: hidden;
 }
 
 h1 {
@@ -10,28 +11,92 @@ h1 {
   text-align: center;
 }
 
-section {
-  position: relative;
-  height: 500px;
-}
-
 .svg-container {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
-img .road {
-  bottom: 500px;
+.road {
+  
+  position: absolute;
 }
 
 .background {
-  z-index: 10;
+  position: absolute;
+  z-index: 1;
+  top: -55vh;
+}
+
+.clouds{
+  z-index: 2;
+  top: -30vh;
+  position: absolute;
+  max-width: 80vw;
+  left: 8vw;
 }
 
 .palm {
-  position: relative;
-  z-index: 5;
-}/*# sourceMappingURL=style.css.map */
+  position: absolute;
+  z-index: 10;
+  top: -11vh;
+  left: 17vw;
+  max-width: 65vw;
+}
+
+.road {
+  position: absolute;
+  z-index: 9;
+}
+
+.bushes1 {
+  z-index: 11;
+  position: absolute;
+  top: 25vh;
+  left: 15vw;
+  max-width: 70vw;
+}
+
+.car{
+  position: absolute;
+  top: 15vh;
+  left: 15vw;
+  z-index: 12;
+  max-width: 80vw;
+  animation: shake 2s infinite;
+}
+
+.foreground {
+  position: absolute;
+  z-index: 11;
+  top: -15.5vw;
+  max-width: 100%;
+}
+
+
+
+/** KEYFRAMES **/
+
+@keyframes shake {
+  0% { transform: translateY(0); }
+  10%, 90% { transform: translateY(-2px); }
+  20%, 80% { transform: translateY(2px); }
+  30%, 70% { transform: translateY(-1px); }
+  40%, 60% { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */
