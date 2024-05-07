@@ -1,11 +1,96 @@
+@charset "UTF-8";
 body {
-    margin: 0;
-    height: 100vh; /* Sørger for at elementet fyller hele viewporten */
     background-image: radial-gradient(circle, #A9DCFF, #EDF7FF);
+    z-index: 0;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
 
-}
+    box-sizing: border-box;
+  }
 
 h1 {
-    color: deeppink;
-    text-align: center;
+  color: deeppink;
+  text-align: center;
 }
+
+.container {
+    overflow-y: hidden; /* Disable vertical scrolling */
+}
+
+.frame {
+    height: 100vh; /* Each frame takes up the full height of the viewport */
+}
+
+.svg-container {
+    position: relative;
+    height: 100%;
+}
+
+
+
+.svg {
+    position: absolute;
+    &.background {
+        z-index: 1;
+        top: -38vw;
+    }
+    &.road {
+        z-index: 9;
+        top: -7vw;
+    }
+        &.bushes {
+    z-index: 11;
+        top: 10vw;
+        left: 17vw;
+        max-width: 70vw;
+    }
+    &.palm {
+        z-index: 10;
+        top: -13vw;
+        left: 22vw;
+        max-width: 70vw;
+    }
+    &.clouds {
+        z-index: 0;
+        top: -15vw;
+        max-width: 75vw;
+        left: 8vw;
+        animation: cloudFloat 20s infinite linear;
+    }
+    &.car {
+        z-index: 12;
+        top: 4vw;
+        left: 17vw;
+        max-width: 78vw;
+        animation: carShake 2s infinite;
+    }
+    &.foreground {
+        z-index: 11;
+        top: -15vw;
+    }
+}
+
+
+/** KEYFRAMES **/
+
+@keyframes carShake {
+  0% { transform: translateY(0); }
+  10%, 90% { transform: translateY(-2px); }
+  20%, 80% { transform: translateY(2px); }
+  30%, 70% { transform: translateY(-1px); }
+  40%, 60% { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes cloudFloat {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5vw); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+/*# sourceMappingURL=style.css.map */
