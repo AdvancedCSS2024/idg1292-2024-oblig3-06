@@ -14,11 +14,13 @@ h1 {
 }
 
 .container {
-  overflow-y: hidden; /* Disable vertical scrolling */
+  overflow-y: hidden;
+  /* Disable vertical scrolling */
 }
 
 .frame {
-  height: 100vh; /* Each frame takes up the full height of the viewport */
+  height: 100vw;
+  /* Each frame takes up the full height of the viewport */
 }
 
 .svg-container {
@@ -36,6 +38,7 @@ h1 {
 .svg.road {
   z-index: 9;
   top: -7vw;
+  max-height: 71vw;
 }
 .svg.bushes {
   z-index: 11;
@@ -87,6 +90,14 @@ h1 {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes carMoveRight {
+  0% {
+    transform: translateX(-20%) smooth 1s;
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 @keyframes cloudFloat {

@@ -1,13 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const frames = document.querySelectorAll('.frame');
+    const car = document.querySelector('.svg.car');
     let currentFrameIndex = 0;
+    let animationFinished = false;
+
+    function startCarAnimation() {
+        car.style.animation = 'carMoveRight 3s forwards'; // Apply the animation
+    }
 
     function scrollToNextFrame() {
-        currentFrameIndex++;
-        if (currentFrameIndex >= frames.length) {
-            currentFrameIndex = frames.length - 1;
+        if (animationFinished) {
+            currentFrameIndex++;
+            if (currentFrameIndex >= frames.length) {
+                currentFrameIndex = frames.length - 1;
+            }
+            frames[currentFrameIndex].scrollIntoView({ behavior: 'smooth' });
         }
-        frames[currentFrameIndex].scrollIntoView({ behavior: 'smooth' });
     }
 
     function scrollToPreviousFrame() {
@@ -20,8 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('wheel', function(event) {
         if (event.deltaY > 0) {
-            scrollToNextFrame();
-        } else if (event.deltaY < 0) {
+            if (!animationFinished) {
+                startCarAnimation(); // Start animation when scrolling down for the first time
+                car.addEventListener('animationend', function() {
+                    animationFinished = true;
+                });
+            } else {
+                scrollToNextFrame();
+            }
+        } else if (event.deltaY < 1) {
             scrollToPreviousFrame();
         }
     });
