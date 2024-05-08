@@ -12,3 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+const trigger = document.querySelector('.trigger');
+const textbox = document.querySelector('.text1');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Show the textbox when the trigger is in view
+            textbox.style.display = 'block';
+        } else {
+            // Hide the textbox when the trigger is out of view
+            textbox.style.display = 'none';
+        }
+    });
+}, { threshold: 0 });
+
+observer.observe(trigger);
+

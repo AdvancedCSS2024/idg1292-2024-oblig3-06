@@ -6,19 +6,29 @@
 
 body {
   margin: 0;
+  background-color: skyblue;
   padding: 0;
 }
 
 .container {
-  height: 2400vh;
+  height: 2700vh;
   overflow: hidden;
 }
 
+.sun {
+  width: 5vw;
+  height: 5vw;
+  background-color: yellow;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 0;
+  left: 3vw;
+}
+
 .frame {
-  height: 300%;
-  overflow: auto; /* Allow content to be scrolled */
-  background-color: skyblue;
-  position: sticky; /* Ensure position of elements within */
+  height: 100%;
+  overflow: auto;
+  position: sticky;
 }
 
 section {
@@ -36,7 +46,6 @@ section {
 .svg {
   position: fixed;
   /* Add more styles as needed */
-  /** KEYFRAMES **/
 }
 .svg.background {
   z-index: 1;
@@ -55,11 +64,11 @@ section {
 }
 .svg.palm {
   z-index: 11;
-  top: -77vw;
-  height: 200%;
+  height: 130%;
+  top: -28vw;
 }
 .svg.clouds {
-  z-index: 0;
+  z-index: 1;
   top: -15vw;
   max-width: 75vw;
   left: 8vw;
@@ -73,6 +82,26 @@ section {
   max-width: 78vw;
   animation: carShake 2s infinite;
 }
+
+.snail {
+  z-index: 100;
+  position: static;
+}
+
+.text1 {
+  position: fixed;
+  left: 60vw;
+  top: 10vw;
+  color: white;
+  font-size: 3vw;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.trigger {
+  height: 50vw;
+}
+
+/** KEYFRAMES **/
 @keyframes carShake {
   0% {
     transform: translateY(0);
@@ -106,7 +135,7 @@ section {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(5vw);
+    transform: translateX(10vw);
   }
   100% {
     transform: translateX(0);
