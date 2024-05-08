@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  height: 2700vh;
+  height: 2900vh;
   overflow: hidden;
 }
 
@@ -40,7 +40,6 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 300%;
 }
 
 .svg {
@@ -64,8 +63,8 @@ section {
 }
 .svg.palm {
   z-index: 11;
-  height: 130%;
-  top: -28vw;
+  height: 80vw;
+  top: -35vw;
 }
 .svg.clouds {
   z-index: 1;
@@ -139,5 +138,35 @@ section {
   }
   100% {
     transform: translateX(0);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .palm {
+    bottom: 0vw;
+    position: relative;
+  }
+  .container {
+    height: 1600vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container {
+    height: 2350vh;
+  }
+  .sun {
+    position: fixed;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    height: 1550vh;
+  }
+  .svg {
+    margin-top: 15vh;
+  }
+  .sun {
+    top: 20%;
+    z-index: 1;
   }
 }/*# sourceMappingURL=style.css.map */
