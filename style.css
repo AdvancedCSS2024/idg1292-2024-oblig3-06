@@ -1,5 +1,10 @@
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  background-image: radial-gradient(circle, #A9DCFF, #EDF7FF);
   z-index: 0;
   width: 100%;
   overflow: hidden;
@@ -9,17 +14,34 @@ body {
 }
 
 h1 {
-  color: deeppink;
+  color: forestgreen;
   text-align: center;
+  top: 7vh;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  z-index: 20;
+  font-family: poetsen one;
+  font-size: 3vw;
 }
 
 .container {
-  overflow-y: hidden;
-  /* Disable vertical scrolling */
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  width: 100%;
 }
 
 .frame {
-  height: 100vw;
+  height: 100vh;
+  background-color: skyblue;
   /* Each frame takes up the full height of the viewport */
 }
 
@@ -67,6 +89,45 @@ h1 {
   animation: carShake 2s infinite;
 }
 .svg.foreground {
+  z-index: 11;
+  top: -15vw;
+}
+.svg.background2 {
+  z-index: 1;
+  top: -38vw;
+}
+.svg.road2 {
+  z-index: 9;
+  top: -7vw;
+  max-height: 71vw;
+}
+.svg.bushes2 {
+  z-index: 11;
+  top: 10vw;
+  left: -9vw;
+  max-width: 70vw;
+}
+.svg.palm2 {
+  z-index: 10;
+  top: -13vw;
+  left: -8vw;
+  max-width: 70vw;
+}
+.svg.clouds2 {
+  z-index: 0;
+  top: -15vw;
+  max-width: 75vw;
+  left: 8vw;
+  animation: cloudFloat 20s infinite linear;
+}
+.svg.car2 {
+  z-index: 12;
+  top: 4vw;
+  left: 17vw;
+  max-width: 78vw;
+  animation: carShake 2s infinite;
+}
+.svg.foreground2 {
   z-index: 11;
   top: -15vw;
 }
