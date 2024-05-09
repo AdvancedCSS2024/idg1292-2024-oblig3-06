@@ -15,7 +15,7 @@ body {
   display: none;
 }
 
-.palm-view {
+.slides {
   display: flex;
   justify-content: left;
   height: 100%;
@@ -23,7 +23,7 @@ body {
   overflow-y: hidden;
 }
 
-.palm-section {
+.palm__section {
   position: relative;
   height: 100%;
   width: 100%;

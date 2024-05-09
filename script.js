@@ -1,25 +1,33 @@
-const palmView = document.querySelector(".palm-view");
-const palmSections = document.querySelectorAll(".palm-section");
+// Selecting the ".palm-view" element and all elements with class ".palm-section"
+const palmView = document.querySelector(".slides");
+const palmSections = document.querySelectorAll(".palm__section");
 
+// Adding a wheel event listener to the window
 window.addEventListener("wheel", (event) => {
+    // Determining the direction of the scroll
     let direction = 1;
     
     if (event.deltaY < 0) {
         direction = -1
     }
 
+    // Scrolling the ".palm-view" element horizontally
     palmView.scrollBy({
         left: ((palmView.scrollWidth / palmView.children.length)) * direction,
         behavior: "smooth",
     })
 })
 
+// IntersectionObserver tracking visibility changes of sections
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
+            // When a section is in view
             console.log("in view")
+            // Adjusting opacity of child elements
             entry.target.children[0].style.opacity = 0.75;
 
+            // Changing background color
             if (entry.target.classList.contains("sky-blue")) {
                 document.body.style.backgroundColor = "skyblue";
             }
@@ -32,6 +40,7 @@ const observer = new IntersectionObserver((entries) => {
                 document.body.style.backgroundColor = "peru";
             }
 
+            // Adjusting position of various elements
             if (entry.target.classList.contains("clouds")) {
                 document.querySelector("#clouds").style.top = "-43%";
             }
@@ -76,6 +85,7 @@ const observer = new IntersectionObserver((entries) => {
                 document.querySelector("#turtle").style.top = "100%";
             }
 
+            // Adjusting opacity of logo
             if (entry.target.classList.contains("logo")) {
                 document.querySelector("#logo").style.opacity = 1;
             }
@@ -85,11 +95,13 @@ const observer = new IntersectionObserver((entries) => {
             }
         }
         else {
+            // When a section is not in view, reset opacity of child elements
             entry.target.children[0].style.opacity = 0;
         }
     });
 });
 
+// Observing visibility changes for each section
 document.querySelectorAll("section").forEach((section) => {
     observer.observe(section);
 })
