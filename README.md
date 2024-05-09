@@ -13,7 +13,8 @@ The layout and theme were sketched out in illustrator. There we extracted the sv
 
 Html structure.
 
-Posisioning and responsiveness.
+Positioning and responsiveness.
+For positioning, we created one div called Container, which defines the whole space where the scrollytelling takes place, and within this div, we creted an section. One of these is the SVG-container, which holds all the different SVG's. We made the SVG with the palms, and bushes one long one, so it gives the illusion that the car is moving forwards. With the right use of "wv", "vh", and "%" when sizing and positioning the images, the page is pretty responsive without us having to do much extra. Just some media queries that defines the length of the container, which differs from different screen sizes. 
 
 Script.
 
