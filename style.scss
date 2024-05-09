@@ -184,25 +184,26 @@ section {
 
 @media screen and (min-width: 1600px) {
 
-    .palm{
+    .palm {
         bottom: 00vw;
         position: relative;
     }
 
-    .container{
+    .container {
         height: 1600vw;
     }
 }
 
 
-    //TABLET TO PHONE 
+//TABLET TO PHONE 
 
 @media screen and (max-width: 850px) {
-    
+
     .container {
         height: 2350vh;
     }
-    .sun{
+
+    .sun {
         position: fixed;
 
         z-index: 0;
@@ -212,23 +213,21 @@ section {
 
 //PHONE
 
-    @media screen and (max-width: 550px) {
-        .palm{
+@media screen and (max-width: 550px) {
+    .palm {}
 
+    .container {
+        height: 1550vh;
 
-   }
-   .container {
-    height: 1550vh;
-    
-}
-
-.svg {
-margin-top: 15vh;
-
-}
-
-.sun{
-    top: 20%;
-    z-index: 1;
-}
     }
+
+    .svg {
+        margin-top: 15vh;
+
+    }
+
+    .sun {
+        top: 20%;
+        z-index: 1;
+    }
+}
