@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: skyblue;
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;
+    transition: all 0.5s linear;
+}
+
+.invisible {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    justify-content: left;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.palm__section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 300px;
+}
+
+.palm-bubble {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 30%;
+    width: 80%;
+    margin: 0;
+    text-align: center;
+    background: #fafafa;
+    opacity: 0;
+    border: 2px solid rgb(22, 22, 22);
+    border-radius: 15px;
+    padding-top: 30px ;
+    transition: all 0.5s linear 0.25s ;
+}
+
+.palm {
+    height: 100%;
+}
+
+
+.static {
+    position: absolute;
+    transition: all 0.75s ease-in-out;
+}
+
+#background {
+    width: 100%;
+    top: -70%;
+}
+
+#road {
+    width: 100%;
+    top: -5%;
+}
+
+#clouds {
+    width: 100%;
+    top: -92%;
+}
+
+#bushes {
+    left: 15%;
+    width: 70%;
+    top: 100%;
+}
+
+#trash1 {
+    left: 15%;
+    width: 23%;
+    top: 100%;
+}
+
+#trash2 {
+    left: 60%;
+    width: 23%;
+    top: 100%;
+}
+
+#foreground {
+    width: 100%;
+    top: 0%;
+}
+
+#car {
+    width: 60%; 
+    left: 23%;
+    top: 24%;
+}
+
+#snail {
+    top: 100%;
+    left: 20%;
+    width: 7.5%;
+    transform: rotate(90deg);
+}
+
+#turtle {
+    top: 100%;
+    left: 56%;
+    width: 10%;
+}
+
+#logo {
+    top: 18%;
+    left: 47.5%;
+    width: 7.5%;
+    border-radius: 10px;
+    opacity: 0;
+}
+
