@@ -1,4 +1,4 @@
-// Selecting the ".palm-view" element and all elements with class ".palm-section"
+// Selecting the ".slides" element and all elements with class ".palm__section"
 const palmView = document.querySelector(".slides");
 const palmSections = document.querySelectorAll(".palm__section");
 
