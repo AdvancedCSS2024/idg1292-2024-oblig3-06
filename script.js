@@ -11,7 +11,7 @@ window.addEventListener("wheel", (event) => {
         direction = -1
     }
 
-    // Scrolling the ".palm-view" element horizontally
+    // Scrolling the ".slides" element horizontally
     palmView.scrollBy({
         left: ((palmView.scrollWidth / palmView.children.length)) * direction,
         behavior: "smooth",
